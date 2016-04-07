@@ -17,7 +17,17 @@ class Product
   def self.find_by_title(title)
     @@products.find{|product| product.title == title}
   end
- 
+
+  def self.in_stock
+    stock_array = []
+    @@products.each do |product| 
+     if product.stock > 0 
+      stock_array << product
+      end
+    end
+    p stock_array
+  end
+
   def in_stock?
   	if @stock > 0
   		return true
@@ -34,9 +44,6 @@ class Product
       end
     end
      @@products<< self
-    # unless @@products.include?(self.title)
-    #   @@products<< self
-    # end
   end
 end
 
