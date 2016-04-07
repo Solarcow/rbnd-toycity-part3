@@ -8,6 +8,8 @@ What was the most rewarding challenge you conquered?
 What two additional features did you build? Why?
 	The first feature I added was a "quantity" for transactions because it seemed logical to include that in case a customer wanted to buy more than 1 of an item. I also made it so the default was to only have a single removed
 
+	The second feature I added was a "return" option for customers that would re-add the product back to stock. It uses the same quantity feature that I added but makes it negative, thus recording a new transaction if needed. I felt that this would be nice in case a return came back to adjust the stock numbers.
+
 Where do you still have room to grow?
 	I am still confused by hashes and arrays and I need to practice how to store data and call them. I understand the basics about them but I have trouble when I need to manipulate the data inside of them.
 

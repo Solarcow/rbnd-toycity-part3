@@ -20,6 +20,11 @@ class Customer
   		Transaction.new(self, product)
   	end
 
+  	def return(product, quantity)
+  		Transaction.new(self, product, quantity: -quantity)
+  	end
+
+
 	private
 	def add_to_customers
     @@customers.each do |customer| 
