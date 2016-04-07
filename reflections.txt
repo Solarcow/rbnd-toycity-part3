@@ -1,0 +1,14 @@
+Reflections
+How long did you spend working on this project?
+	I spent a long time figuring out how to search for the title in products (probably 2 days) and once I got help from a coach on that I was able to code the majority of the rest of the project within 2 hours.
+
+What was the most rewarding challenge you conquered?
+	The most rewarding challenge was figuring out how to search the current array of products. I had help from an instructor to figure out how to iterate through the products and search for a specific area. Once this "clicked" the rest of the coding went easily.
+	
+What two additional features did you build? Why?
+	The first feature I added was a "quantity" for transactions because it seemed logical to include that in case a customer wanted to buy more than 1 of an item. I also made it so the default was to only have a single removed
+
+Where do you still have room to grow?
+	I am still confused by hashes and arrays and I need to practice how to store data and call them. I understand the basics about them but I have trouble when I need to manipulate the data inside of them.
+
+
