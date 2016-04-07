@@ -8,8 +8,8 @@ class Transaction
 		@customer = customer
 		@product = product_info
 		@id = @@id
-		@id += 1
-		add_to_transactions
+		@@id += 1
+		@@transactions << self
 		if options[:quantity]
 			@product.stock -= options[:quantity]
 		else
@@ -23,14 +23,5 @@ class Transaction
 
 	def self.find(location)
 		@@transactions.find{|transaction| transaction.id = location}
-	end
-
-	private
-
-	def add_to_transactions
-		if @product.in_stock? == false
-			raise OutOfStockError, "#{product.title} is out of stock"
-		end
-		@@transactions << self
 	end
 end

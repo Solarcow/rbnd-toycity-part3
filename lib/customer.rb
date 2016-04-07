@@ -17,6 +17,9 @@ class Customer
   	end
 
   	def purchase(product)
+  		if product.in_stock? == false
+			raise OutOfStockError, "#{product.title} is out of stock"
+		end
   		Transaction.new(self, product)
   	end
 
@@ -29,7 +32,7 @@ class Customer
 	def add_to_customers
     @@customers.each do |customer| 
       if customer.name == @name
-        raise DuplicateProductError, "#{name} already exists"
+        raise DuplicateCustomerError, "#{name} already exists"
       end
     end
      @@customers<< self

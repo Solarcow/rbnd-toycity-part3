@@ -21,7 +21,7 @@ class Product
   def self.in_stock
     stock_array = []
     @@products.each do |product| 
-     if product.stock > 0 
+     if product.in_stock?
       stock_array << product
       end
     end
@@ -29,12 +29,9 @@ class Product
   end
 
   def in_stock?
-  	if @stock > 0
-  		return true
-  	else
-  		return false
-  	end
+  	@stock > 0
   end
+
   private
 
   def add_to_products
